@@ -13,7 +13,7 @@ int main(void)
 	int hour = p_tm->tm_hour;
 	int minute = p_tm->tm_min;
 	int second = p_tm->tm_sec;
-	printf("世界统一时间是 %d年%d月%d日 %d:%d:%d\n", year, month, day, hour, minute, second);
+	printf("世界统一时间是 %d年%02d月%02d日 %02d:%02d:%02d\n", year, month, day, hour, minute, second);
 	
 	int days[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	if (year%4==0 && year%100 || year%400==0) days[1] = 29;
@@ -28,6 +28,6 @@ int main(void)
 		}
 	}
 	hour = (hour+8)%24;	
-	printf("北京时间是 %d年%d月%d日 %d:%d:%d", year, month, day, hour, minute, second);
+	printf("北京时间是 %d年%02d月%02d日 %02d:%02d:%02d", year, month, day, hour, minute, second);
 	return 0;
 }
