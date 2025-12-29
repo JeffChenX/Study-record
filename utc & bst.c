@@ -5,7 +5,7 @@ int main(void)
 {
 	time_t seconds;
 	time(&seconds);
-	printf("自 UTC 1970-01-01 00:00:00 起，到现在经过了 %lld 秒\n", seconds);
+	printf("自 UTC 1970-01-01 00:00:00 起，到现在经过了 %lld 秒\n", (long long)seconds);
 	struct tm* p_tm = gmtime(&seconds);
 	int year = 1900 + p_tm->tm_year;
 	int month = 1 + p_tm->tm_mon;
